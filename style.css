@@ -9,7 +9,8 @@
 
 :root {
     --primary-color-light: #fff;
-    --secondary-color-light: #e6e6e6; 
+    --secondary-color-light: #e6e6e6;
+    --text-input-color-light: #f3f3f3;
 }
 
 
@@ -26,6 +27,17 @@ main {
     height: 100vh;
 }
 
+ul {
+    list-style-type: none;
+}
+
+button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+}
+
 .main-container {
     display: flex;
     flex-direction: column;
@@ -37,23 +49,37 @@ main {
 
 }
 
+.task-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .container-app {
     display: flex;
     flex-direction: column
 }
 
-.btn-input {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-
-}
-
 .list-container {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
+    margin-top: 1rem;
 }
 
-.complete-task {
+#completed-task {
     text-decoration: line-through;
+}
+
+.txt-input {
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--text-input-color-light);
+    padding: 0.25rem;
+    margin-right: 0.25rem;
+}
+
+.txt-input:focus {
+    outline: none;
 }

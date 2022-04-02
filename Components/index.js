@@ -24,14 +24,18 @@ function addTask () {
     const doneBtn = document.createElement('button')
     doneBtn.innerHTML = '<span class="material-icons-outlined">done</span>'
     listContainter.classList.add('done-btn')
-    doneBtn.onclick = addList.classList.add('complete-task')
-    
     listContainter.appendChild(doneBtn)
 
     listApp.appendChild(listContainter)
 
+    doneBtn.addEventListener('click', () => {
+        addList.setAttribute('id', 'completed-task')
+
+        // if(document.getElementById('completed-task').style.visibility = "visible") {
+        //     addList.removeAttribute('id', 'completed-task')
+        // }
+        
+    })
+
 }
-
-
-
 
