@@ -21,6 +21,7 @@ function addTask () {
 
     listContainter.appendChild(addList)
 
+
     const doneBtn = document.createElement('button')
     doneBtn.innerHTML = '<span class="material-icons-outlined">done</span>'
     listContainter.classList.add('done-btn')
@@ -29,13 +30,14 @@ function addTask () {
     listApp.appendChild(listContainter)
 
     doneBtn.addEventListener('click', () => {
-        addList.setAttribute('id', 'completed-task')
 
-        // if(document.getElementById('completed-task').style.visibility = "visible") {
-        //     addList.removeAttribute('id', 'completed-task')
-        // }
-        
-    })
+
+        if (addList.hasAttribute('id', 'completed-task')) {
+            addList.removeAttribute('id', 'completed-task')
+        }
+        else {
+            addList.setAttribute('id', 'completed-task')
+        }
+})
 
 }
-
