@@ -1,3 +1,3 @@
 # todolist
 
-A simple aplication created for make automated tests with cypress.
+A simple aplication created to make automated tests with cypress.
